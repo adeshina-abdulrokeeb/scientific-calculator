@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="sci-calc.css" />
+</head>
+
+<body>
+  <main id="app" class="calculator-app" aria-labelledby="calc-title">
+
+    <div class="calculator" role="application" aria-label="Scientific calculator">
+      <!-- Display area -->
+      <div class="display-wrap">
+        <input id="display" class="display" aria-label="Calculator display" readonly />
+        <div class="display-sub">
+          <button id="modeToggle" class="mode-btn" aria-pressed="true" title="Toggle degrees/radians">Deg</button>
+          <div id="memory" class="memory" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- keypad -->
+      <div class="keys-grid" role="group" aria-label="Calculator keys">
+        <!-- row 1 -->
+        <button data-action="clear" class="btn operator">C</button>
+        <button data-action="del" class="btn operator">DEL</button>
+        <button data-action="(" class="btn operator">(</button>
+        <button data-action=")" class="btn operator">)</button>
+
+        <!-- row 2 -->
+        <button data-action="sin" class="btn fn">sin</button>
+        <button data-action="cos" class="btn fn">cos</button>
+        <button data-action="tan" class="btn fn">tan</button>
+        <button data-action="^" class="btn operator">^</button>
+
+        <!-- row 3 -->
+        <button data-action="asin" class="btn fn">asin</button>
+        <button data-action="acos" class="btn fn">acos</button>
+        <button data-action="atan" class="btn fn">atan</button>
+        <button data-action="!" class="btn operator">!</button>
+
+        <!-- row 4 -->
+        <button data-action="ln" class="btn fn">ln</button>
+        <button data-action="log" class="btn fn">log</button>
+        <button data-action="sqrt" class="btn fn">√</button>
+        <button data-action="%" class="btn operator">%</button>
+
+        <!-- row 5 -->
+        <button data-action="7" class="btn">7</button>
+        <button data-action="8" class="btn">8</button>
+        <button data-action="9" class="btn">9</button>
+        <button data-action="/" class="btn operator">÷</button>
+
+        <!-- row 6 -->
+        <button data-action="4" class="btn">4</button>
+        <button data-action="5" class="btn">5</button>
+        <button data-action="6" class="btn">6</button>
+        <button data-action="*" class="btn operator">×</button>
+
+        <!-- row 7 -->
+        <button data-action="1" class="btn">1</button>
+        <button data-action="2" class="btn">2</button>
+        <button data-action="3" class="btn">3</button>
+        <button data-action="-" class="btn operator">−</button>
+
+        <!-- row 8 -->
+        <button data-action="0" class="btn">0</button>
+        <button data-action="." class="btn">.</button>
+        <button data-action="pi" class="btn fn">π</button>
+        <button data-action="+" class="btn operator">+</button>
+
+        <!-- row 9 -->
+        <button data-action="ans" class="btn history-btn">Ans</button>
+        <button data-action="exp" class="btn fn">exp</button>
+        <button data-action="e" class="btn fn">e</button>
+        <button data-action="=" class="btn equals">=</button>
+      </div>
+    </div>
+
+    <!-- history panel -->
+    <aside class="history" aria-label="Calculation history">
+      <h2 class="history-title">History</h2>
+      <ul id="historyList" class="history-list" aria-live="polite"></ul>
+      <div class="history-actions">
+        <button id="clearHistory" class="small">Clear</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="sci-calc.js" defer></script>
+</body>
+
+</html>
