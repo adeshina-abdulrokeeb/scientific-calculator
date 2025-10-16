@@ -14,9 +14,6 @@
   margin: 0;
   padding: 0;
 }
-html, body {
-  height: 100%;
-}
 body {
   font-family: "Inter", sans-serif;
   background: radial-gradient(
@@ -31,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 28px;
+  overflow-y: auto;
 }
 /* App container */
 .calculator-app {
@@ -131,7 +129,11 @@ body {
   border-radius: 10px;
   font-size: 1.05rem;
   cursor: pointer;
-  min-height: 56px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 .btn:hover {
